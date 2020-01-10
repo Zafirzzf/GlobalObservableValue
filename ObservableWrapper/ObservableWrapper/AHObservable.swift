@@ -29,8 +29,6 @@ class AHObservable<T> {
     
     func subscribe(_ target: AnyObject, action: @escaping (T) -> Void) {
         let handler = AHObserverHandler(target: target, action: action)
-        print(handler.hashValue)
-        print(observers.map { $0.hashValue })
         // 重复注册, 保留后一个
         if observers.contains(handler){
             observers.remove(handler)

@@ -11,10 +11,10 @@ import Foundation
 class UserRelation {
     var alohaGet: Bool = false
     
-    @MemoryObservableValue(storer: CacheStorer<Bool>())
+    @MemoryObservableValue(storer: MatchCacheStorer.shared)
     var match: Bool = false
     
-    @MemoryObservableValue(storer: CacheStorer<String?>())
+    @MemoryObservableValue(storer: UserNameCacheStorer.shared)
     var name: String? = nil
     
     var userId = ""

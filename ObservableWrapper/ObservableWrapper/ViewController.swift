@@ -20,7 +20,9 @@ class ViewController: UIViewController {
         relation.$match.addObserver(self, id: relation.userId) { (newValue) in
             print("match: ", newValue)
         }
-        
+        relation.$match.addObserver(self, id: relation.userId) { (newValue) in
+            print("match2: ", newValue)
+        }
         relation.alohaGet = true
         relation.match = true
 

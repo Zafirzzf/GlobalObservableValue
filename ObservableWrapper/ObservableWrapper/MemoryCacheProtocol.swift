@@ -43,6 +43,6 @@ final class MatchCacheStorer: CacheStorer<Bool> {
     static let shared = MatchCacheStorer()
 }
 
-final class UserNameCacheStorer: CacheStorer<String> {
+final class UserNameCacheStorer: CacheStorer<String?> {
     static let shared = UserNameCacheStorer()
 }
