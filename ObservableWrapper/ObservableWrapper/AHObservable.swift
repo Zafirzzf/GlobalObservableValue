@@ -29,6 +29,8 @@ class AHObservable<T> {
     
     func subscribe(_ target: AnyObject, action: @escaping (T) -> Void) {
         let handler = AHObserverHandler(target: target, action: action)
+        print(handler.hashValue)
+        print(observers.map { $0.hashValue })
         // 重复注册, 保留后一个
         if observers.contains(handler){
             observers.remove(handler)
@@ -38,16 +40,16 @@ class AHObservable<T> {
 }
 
 class AHObserverHandler<T>: Hashable {
-
+    
+    static func == (lhs: AHObserverHandler<T>, rhs: AHObserverHandler<T>) -> Bool {
+        lhs.hashValue == rhs.hashValue
+    }
+    
     let action: (T) -> Void
     weak var target: AnyObject?
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(target?.hash)
-    }
-    
-    static func == (lhs: AHObserverHandler<T>, rhs: AHObserverHandler<T>) -> Bool {
-        return lhs === rhs
     }
     
     init(target: AnyObject?, action: @escaping (T) -> Void) {

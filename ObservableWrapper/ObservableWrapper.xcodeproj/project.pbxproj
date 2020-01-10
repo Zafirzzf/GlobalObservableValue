@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18073DC423C5E17D00D561F9 /* MemoryCacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18073DC323C5E17D00D561F9 /* MemoryCacheProtocol.swift */; };
+		18073DC523C5E17D00D561F9 /* MemoryCacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18073DC323C5E17D00D561F9 /* MemoryCacheProtocol.swift */; };
 		185DAFC923BF4CE000FE304F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DAFC823BF4CE000FE304F /* AppDelegate.swift */; };
 		185DAFCB23BF4CE000FE304F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DAFCA23BF4CE000FE304F /* SceneDelegate.swift */; };
 		185DAFCD23BF4CE000FE304F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DAFCC23BF4CE000FE304F /* ViewController.swift */; };
@@ -19,8 +21,6 @@
 		185DAFF223C041F500FE304F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DAFF123C041F500FE304F /* SecondViewController.swift */; };
 		185DB05023C1A55F00FE304F /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB04F23C1A55F00FE304F /* ObservableValue.swift */; };
 		185DB05123C1A55F00FE304F /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB04F23C1A55F00FE304F /* ObservableValue.swift */; };
-		185DB06223C4356E00FE304F /* GlobalObservableKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB06123C4356E00FE304F /* GlobalObservableKey.swift */; };
-		185DB06323C4356E00FE304F /* GlobalObservableKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB06123C4356E00FE304F /* GlobalObservableKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18073DC323C5E17D00D561F9 /* MemoryCacheProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCacheProtocol.swift; sourceTree = "<group>"; };
 		185DAFC523BF4CE000FE304F /* ObservableWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObservableWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185DAFC823BF4CE000FE304F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185DAFCA23BF4CE000FE304F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		185DAFEC23BF5A9000FE304F /* UserRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRelation.swift; sourceTree = "<group>"; };
 		185DAFF123C041F500FE304F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		185DB04F23C1A55F00FE304F /* ObservableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
-		185DB06123C4356E00FE304F /* GlobalObservableKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalObservableKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 				185DAFCC23BF4CE000FE304F /* ViewController.swift */,
 				185DAFF123C041F500FE304F /* SecondViewController.swift */,
 				185DB04F23C1A55F00FE304F /* ObservableValue.swift */,
-				185DB06123C4356E00FE304F /* GlobalObservableKey.swift */,
+				18073DC323C5E17D00D561F9 /* MemoryCacheProtocol.swift */,
 				185DAFEC23BF5A9000FE304F /* UserRelation.swift */,
 				185DAFEA23BF584000FE304F /* AHObservable.swift */,
 				185DAFCE23BF4CE000FE304F /* Main.storyboard */,
@@ -220,11 +220,11 @@
 				185DAFF223C041F500FE304F /* SecondViewController.swift in Sources */,
 				185DB05023C1A55F00FE304F /* ObservableValue.swift in Sources */,
 				185DAFCD23BF4CE000FE304F /* ViewController.swift in Sources */,
+				18073DC423C5E17D00D561F9 /* MemoryCacheProtocol.swift in Sources */,
 				185DAFC923BF4CE000FE304F /* AppDelegate.swift in Sources */,
 				185DAFCB23BF4CE000FE304F /* SceneDelegate.swift in Sources */,
 				185DAFED23BF5A9000FE304F /* UserRelation.swift in Sources */,
 				185DAFEB23BF584000FE304F /* AHObservable.swift in Sources */,
-				185DB06223C4356E00FE304F /* GlobalObservableKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,8 +233,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				185DB05123C1A55F00FE304F /* ObservableValue.swift in Sources */,
+				18073DC523C5E17D00D561F9 /* MemoryCacheProtocol.swift in Sources */,
 				185DAFE023BF4CE100FE304F /* ObservableWrapperTests.swift in Sources */,
-				185DB06323C4356E00FE304F /* GlobalObservableKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

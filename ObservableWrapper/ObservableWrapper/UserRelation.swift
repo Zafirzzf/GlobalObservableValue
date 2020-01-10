@@ -9,15 +9,14 @@
 import Foundation
 
 class UserRelation {
-    var aloha: ObservableValue<Bool> {
-        .init(value: false, id: userId, observableKey: RelationObservableKey(property: "aloha"))
-    }
+    var alohaGet: Bool = false
     
-    @GlobalObservableValue(wrappedValue: false,
-                           observableKey: RelationObservableKey(property: "alohaGet"))
-    var alohaGet: Bool
+    @MemoryObservableValue(storer: CacheStorer<Bool>())
+    var match: Bool = false
     
-    var match: Bool
+    @MemoryObservableValue(storer: CacheStorer<String?>())
+    var name: String? = nil
+    
     var userId = ""
     
     init(id: String) {

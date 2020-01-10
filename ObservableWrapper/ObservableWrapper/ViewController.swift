@@ -16,16 +16,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .purple
         let relation = UserRelation(id: "1")
-        relation.aloha.addObserver(self) { (newValue) in
-             print("aloha: ", newValue)
+    
+        relation.$match.addObserver(self, id: relation.userId) { (newValue) in
+            print("match: ", newValue)
         }
         
-        relation.$alohaGet.addObserver(self, id: relation.userId) { (newValue) in
-            print("alohaGet: ", newValue)
-        }
-        
-        relation.aloha.value = true
         relation.alohaGet = true
+        relation.match = true
+
 
     }
     

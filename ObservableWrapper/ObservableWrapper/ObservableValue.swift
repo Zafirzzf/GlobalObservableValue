@@ -8,89 +8,43 @@
 
 import Foundation
 
-private class GlobalObservableManager {
-    static var cacheMap = [String: Any]()
-    static var observable = AHObservable<[String: Any]>(nil)
-    
-    static func updateValue(of key: String, value: Any) {
-        cacheMap[key] = value
-        observable.on([key: value])
-    }
-}
-
-class ObservableValue<T> {
-    private let key: String
-    private let id: String
-    deinit {
-        
-    }
-    var value: T? {
-        get {
-            GlobalObservableManager.cacheMap[hashMapKey] as? T
-        }
-        set {
-            guard let newValue = newValue else { return }
-            GlobalObservableManager.updateValue(of: hashMapKey, value: newValue)
-        }
-    }
-    
-    var hashMapKey: String {
-        id + key
-    }
-    
-    init(value: T, id: String, observableKey: GlobalObservableKey) {
-        self.id = id
-        self.key = observableKey.key
-        self.value = value
-    }
-
-    func addObserver(_ target: AnyObject, handler: @escaping (T) -> Void) {
-        GlobalObservableManager.observable.subscribe(target) { [weak self] (dict) in
-            guard let self = self else {
-                return
-            }
-            if let value = dict[self.hashMapKey] as? T {
-                handler(value)
-            }
-        }
-    }
-}
-
 @propertyWrapper
-struct GlobalObservableValue<T> {
-    private let key: String
+struct MemoryObservableValue<T: MemoryCacheStorerProtocol> {
+    
     private var id: String?
-
-    var wrappedValue: T? {
+    private let initialValue: T.ValueType
+    private var storer: T
+    
+    var wrappedValue: T.ValueType {
         get {
-            hashMapKey.flatMap { GlobalObservableManager.cacheMap[$0] as? T }
+            id.flatMap { storer.cacheMap[$0] } ?? initialValue
         }
         set {
-            guard let newValue = newValue, let hashMapKey = hashMapKey else { return }
-            GlobalObservableManager.updateValue(of: hashMapKey, value: newValue)
+            guard let id = id else { return }
+            storer.updateValue(of: id, value: newValue)
         }
     }
+    
     var projectedValue: Self {
         get { self }
         set { self = newValue }
     }
-    var hashMapKey: String? {
-        id.map { $0 + key }
+    
+    init(wrappedValue value: T.ValueType, id: String? = nil, storer: T) {
+        self.id = id
+        self.storer = storer
+        self.initialValue = value
+        self.wrappedValue = value
     }
     
-    init(wrappedValue value: T?, id: String? = nil, observableKey: GlobalObservableKey) {
-        self.id = id
-        self.key = observableKey.key
+    init(wrappedValue value: T.ValueType, storer: T) {
+        self.initialValue = value
+        self.storer = storer
         self.wrappedValue = value
     }
 
-    mutating func addObserver(_ target: AnyObject, id: String, handler: @escaping (T) -> Void) {
+    mutating func addObserver(_ target: AnyObject, id: String, handler: @escaping (T.ValueType) -> Void) {
         self.id = id
-        GlobalObservableManager.observable.subscribe(target) { [self] (dict) in
-            guard let hashMapKey = self.hashMapKey else { return }
-            if let value = dict[hashMapKey] as? T {
-                handler(value)
-            }
-        }
+        storer.observe(target, key: id, handler: handler)
     }
 }
