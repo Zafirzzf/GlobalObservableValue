@@ -21,6 +21,7 @@
 		185DAFF223C041F500FE304F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DAFF123C041F500FE304F /* SecondViewController.swift */; };
 		185DB05023C1A55F00FE304F /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB04F23C1A55F00FE304F /* ObservableValue.swift */; };
 		185DB05123C1A55F00FE304F /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB04F23C1A55F00FE304F /* ObservableValue.swift */; };
+		1868988F23D0231800F87348 /* CacheStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1868988E23D0231800F87348 /* CacheStorer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,7 @@
 
 /* Begin PBXFileReference section */
 		18073DC323C5E17D00D561F9 /* MemoryCacheProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCacheProtocol.swift; sourceTree = "<group>"; };
-		185DAFC523BF4CE000FE304F /* ObservableWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObservableWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		185DAFC523BF4CE000FE304F /* MemoryCacheStorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryCacheStorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185DAFC823BF4CE000FE304F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185DAFCA23BF4CE000FE304F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		185DAFCC23BF4CE000FE304F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,13 +44,14 @@
 		185DAFD123BF4CE100FE304F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		185DAFD423BF4CE100FE304F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185DAFD623BF4CE100FE304F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		185DAFDB23BF4CE100FE304F /* ObservableWrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObservableWrapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		185DAFDB23BF4CE100FE304F /* MemoryCacheStorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryCacheStorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		185DAFDF23BF4CE100FE304F /* ObservableWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableWrapperTests.swift; sourceTree = "<group>"; };
 		185DAFE123BF4CE100FE304F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185DAFEA23BF584000FE304F /* AHObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHObservable.swift; sourceTree = "<group>"; };
 		185DAFEC23BF5A9000FE304F /* UserRelation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRelation.swift; sourceTree = "<group>"; };
 		185DAFF123C041F500FE304F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		185DB04F23C1A55F00FE304F /* ObservableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
+		1868988E23D0231800F87348 /* CacheStorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStorer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,7 @@
 		185DAFBC23BF4CE000FE304F = {
 			isa = PBXGroup;
 			children = (
-				185DAFC723BF4CE000FE304F /* ObservableWrapper */,
+				185DAFC723BF4CE000FE304F /* MemoryCacheStorer */,
 				185DAFDE23BF4CE100FE304F /* ObservableWrapperTests */,
 				185DAFC623BF4CE000FE304F /* Products */,
 			);
@@ -82,13 +84,13 @@
 		185DAFC623BF4CE000FE304F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				185DAFC523BF4CE000FE304F /* ObservableWrapper.app */,
-				185DAFDB23BF4CE100FE304F /* ObservableWrapperTests.xctest */,
+				185DAFC523BF4CE000FE304F /* MemoryCacheStorer.app */,
+				185DAFDB23BF4CE100FE304F /* MemoryCacheStorerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		185DAFC723BF4CE000FE304F /* ObservableWrapper */ = {
+		185DAFC723BF4CE000FE304F /* MemoryCacheStorer */ = {
 			isa = PBXGroup;
 			children = (
 				185DAFC823BF4CE000FE304F /* AppDelegate.swift */,
@@ -97,6 +99,7 @@
 				185DAFF123C041F500FE304F /* SecondViewController.swift */,
 				185DB04F23C1A55F00FE304F /* ObservableValue.swift */,
 				18073DC323C5E17D00D561F9 /* MemoryCacheProtocol.swift */,
+				1868988E23D0231800F87348 /* CacheStorer.swift */,
 				185DAFEC23BF5A9000FE304F /* UserRelation.swift */,
 				185DAFEA23BF584000FE304F /* AHObservable.swift */,
 				185DAFCE23BF4CE000FE304F /* Main.storyboard */,
@@ -104,7 +107,7 @@
 				185DAFD323BF4CE100FE304F /* LaunchScreen.storyboard */,
 				185DAFD623BF4CE100FE304F /* Info.plist */,
 			);
-			path = ObservableWrapper;
+			path = MemoryCacheStorer;
 			sourceTree = "<group>";
 		};
 		185DAFDE23BF4CE100FE304F /* ObservableWrapperTests */ = {
@@ -119,9 +122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		185DAFC423BF4CE000FE304F /* ObservableWrapper */ = {
+		185DAFC423BF4CE000FE304F /* MemoryCacheStorer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 185DAFE423BF4CE100FE304F /* Build configuration list for PBXNativeTarget "ObservableWrapper" */;
+			buildConfigurationList = 185DAFE423BF4CE100FE304F /* Build configuration list for PBXNativeTarget "MemoryCacheStorer" */;
 			buildPhases = (
 				185DAFC123BF4CE000FE304F /* Sources */,
 				185DAFC223BF4CE000FE304F /* Frameworks */,
@@ -131,14 +134,14 @@
 			);
 			dependencies = (
 			);
-			name = ObservableWrapper;
+			name = MemoryCacheStorer;
 			productName = ObservableWrapper;
-			productReference = 185DAFC523BF4CE000FE304F /* ObservableWrapper.app */;
+			productReference = 185DAFC523BF4CE000FE304F /* MemoryCacheStorer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		185DAFDA23BF4CE100FE304F /* ObservableWrapperTests */ = {
+		185DAFDA23BF4CE100FE304F /* MemoryCacheStorerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 185DAFE723BF4CE100FE304F /* Build configuration list for PBXNativeTarget "ObservableWrapperTests" */;
+			buildConfigurationList = 185DAFE723BF4CE100FE304F /* Build configuration list for PBXNativeTarget "MemoryCacheStorerTests" */;
 			buildPhases = (
 				185DAFD723BF4CE100FE304F /* Sources */,
 				185DAFD823BF4CE100FE304F /* Frameworks */,
@@ -149,9 +152,9 @@
 			dependencies = (
 				185DAFDD23BF4CE100FE304F /* PBXTargetDependency */,
 			);
-			name = ObservableWrapperTests;
+			name = MemoryCacheStorerTests;
 			productName = ObservableWrapperTests;
-			productReference = 185DAFDB23BF4CE100FE304F /* ObservableWrapperTests.xctest */;
+			productReference = 185DAFDB23BF4CE100FE304F /* MemoryCacheStorerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -173,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 185DAFC023BF4CE000FE304F /* Build configuration list for PBXProject "ObservableWrapper" */;
+			buildConfigurationList = 185DAFC023BF4CE000FE304F /* Build configuration list for PBXProject "MemoryCacheStorer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -186,8 +189,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				185DAFC423BF4CE000FE304F /* ObservableWrapper */,
-				185DAFDA23BF4CE100FE304F /* ObservableWrapperTests */,
+				185DAFC423BF4CE000FE304F /* MemoryCacheStorer */,
+				185DAFDA23BF4CE100FE304F /* MemoryCacheStorerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +227,7 @@
 				185DAFC923BF4CE000FE304F /* AppDelegate.swift in Sources */,
 				185DAFCB23BF4CE000FE304F /* SceneDelegate.swift in Sources */,
 				185DAFED23BF5A9000FE304F /* UserRelation.swift in Sources */,
+				1868988F23D0231800F87348 /* CacheStorer.swift in Sources */,
 				185DAFEB23BF584000FE304F /* AHObservable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +247,7 @@
 /* Begin PBXTargetDependency section */
 		185DAFDD23BF4CE100FE304F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 185DAFC423BF4CE000FE304F /* ObservableWrapper */;
+			target = 185DAFC423BF4CE000FE304F /* MemoryCacheStorer */;
 			targetProxy = 185DAFDC23BF4CE100FE304F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -387,7 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ObservableWrapper/Info.plist;
+				INFOPLIST_FILE = MemoryCacheStorer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -405,7 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ObservableWrapper/Info.plist;
+				INFOPLIST_FILE = MemoryCacheStorer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -435,7 +439,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ObservableWrapper.app/ObservableWrapper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemoryCacheStorer.app/MemoryCacheStorer";
 			};
 			name = Debug;
 		};
@@ -456,14 +460,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ObservableWrapper.app/ObservableWrapper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MemoryCacheStorer.app/MemoryCacheStorer";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		185DAFC023BF4CE000FE304F /* Build configuration list for PBXProject "ObservableWrapper" */ = {
+		185DAFC023BF4CE000FE304F /* Build configuration list for PBXProject "MemoryCacheStorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				185DAFE223BF4CE100FE304F /* Debug */,
@@ -472,7 +476,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		185DAFE423BF4CE100FE304F /* Build configuration list for PBXNativeTarget "ObservableWrapper" */ = {
+		185DAFE423BF4CE100FE304F /* Build configuration list for PBXNativeTarget "MemoryCacheStorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				185DAFE523BF4CE100FE304F /* Debug */,
@@ -481,7 +485,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		185DAFE723BF4CE100FE304F /* Build configuration list for PBXNativeTarget "ObservableWrapperTests" */ = {
+		185DAFE723BF4CE100FE304F /* Build configuration list for PBXNativeTarget "MemoryCacheStorerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				185DAFE823BF4CE100FE304F /* Debug */,

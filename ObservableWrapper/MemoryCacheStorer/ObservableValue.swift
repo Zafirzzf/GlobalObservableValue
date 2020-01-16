@@ -11,16 +11,16 @@ import Foundation
 @propertyWrapper
 struct MemoryObservableValue<T: MemoryCacheStorerProtocol> {
     
-    private var id: String?
+    private var key: String?
     private let initialValue: T.ValueType
     private var storer: T
     
     var wrappedValue: T.ValueType {
         get {
-            id.flatMap { storer.cacheMap[$0] } ?? initialValue
+            key.flatMap { storer.cacheMap[$0] } ?? initialValue
         }
         set {
-            guard let id = id else { return }
+            guard let id = key else { return }
             storer.updateValue(of: id, value: newValue)
         }
     }
@@ -30,8 +30,8 @@ struct MemoryObservableValue<T: MemoryCacheStorerProtocol> {
         set { self = newValue }
     }
     
-    init(wrappedValue value: T.ValueType, id: String? = nil, storer: T) {
-        self.id = id
+    init(wrappedValue value: T.ValueType, key: String?, storer: T) {
+        self.key = key
         self.storer = storer
         self.initialValue = value
         self.wrappedValue = value
@@ -42,9 +42,20 @@ struct MemoryObservableValue<T: MemoryCacheStorerProtocol> {
         self.storer = storer
         self.wrappedValue = value
     }
+    
+    mutating func setObserverKey(_ key: String) {
+        self.key = key
+    }
 
-    mutating func addObserver(_ target: AnyObject, id: String, handler: @escaping (T.ValueType) -> Void) {
-        self.id = id
-        storer.observe(target, key: id, handler: handler)
+    mutating func addObserver(_ target: AnyObject, handler: @escaping (T.ValueType) -> Void) {
+        guard let key = key else {
+            return
+        }
+        storer.observe(target) { (dict) in
+            guard let value = dict[key] else {
+                return
+            }
+            handler(value)
+        }
     }
 }
