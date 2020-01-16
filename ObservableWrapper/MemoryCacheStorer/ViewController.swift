@@ -16,15 +16,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .purple
         let relation = UserRelation(id: "1")
-        let relation2 = UserRelation(id: "1")
-//        relation.$match.addObserver(self, id: relation.userId) { (newValue) in
-//            print("match: ", newValue)
-//        }
-        relation.$match.addObserver(self) { (newValue) in
+        let relation2 = UserRelation(id: "2")
+        relation2.$match.addObserver(self) { (newValue) in
             print("match2: ", newValue)
         }
         relation2.match = false
-//        relation.match = true
+        relation.match = true
 
 
     }
