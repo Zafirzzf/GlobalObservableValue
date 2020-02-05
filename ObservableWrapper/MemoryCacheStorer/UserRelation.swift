@@ -11,12 +11,12 @@ import Foundation
 class UserRelation {
     var alohaGet: Bool = false
     
-    @MemoryObservableValue(storer: CacheStorer.match)
+    @MemoryObservableValue(storer: MemoryCacheStorerConfig.match)
     var match: Bool = false
     
-    @MemoryObservableValue(storer: CacheStorer.username)
+    @MemoryObservableValue(storer: MemoryCacheStorerConfig.username)
     var name: String? = nil
-    
+
     var userId = ""
     
     init(id: String) {

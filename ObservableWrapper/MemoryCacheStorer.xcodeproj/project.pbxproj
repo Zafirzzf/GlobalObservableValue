@@ -22,6 +22,12 @@
 		185DB05023C1A55F00FE304F /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB04F23C1A55F00FE304F /* ObservableValue.swift */; };
 		185DB05123C1A55F00FE304F /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB04F23C1A55F00FE304F /* ObservableValue.swift */; };
 		1868988F23D0231800F87348 /* CacheStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1868988E23D0231800F87348 /* CacheStorer.swift */; };
+		186898BE23D073C600F87348 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DAFCA23BF4CE000FE304F /* SceneDelegate.swift */; };
+		186898BF23D073C600F87348 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DAFCC23BF4CE000FE304F /* ViewController.swift */; };
+		186898C023D073C600F87348 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DAFF123C041F500FE304F /* SecondViewController.swift */; };
+		186898C123D073C600F87348 /* CacheStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1868988E23D0231800F87348 /* CacheStorer.swift */; };
+		186898C223D073C600F87348 /* UserRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DAFEC23BF5A9000FE304F /* UserRelation.swift */; };
+		186898C323D073C600F87348 /* AHObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DAFEA23BF584000FE304F /* AHObservable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186898BE23D073C600F87348 /* SceneDelegate.swift in Sources */,
+				186898BF23D073C600F87348 /* ViewController.swift in Sources */,
+				186898C023D073C600F87348 /* SecondViewController.swift in Sources */,
+				186898C123D073C600F87348 /* CacheStorer.swift in Sources */,
+				186898C223D073C600F87348 /* UserRelation.swift in Sources */,
+				186898C323D073C600F87348 /* AHObservable.swift in Sources */,
 				185DB05123C1A55F00FE304F /* ObservableValue.swift in Sources */,
 				18073DC523C5E17D00D561F9 /* MemoryCacheProtocol.swift in Sources */,
 				185DAFE023BF4CE100FE304F /* ObservableWrapperTests.swift in Sources */,

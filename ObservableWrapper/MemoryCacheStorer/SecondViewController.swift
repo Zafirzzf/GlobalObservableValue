@@ -15,6 +15,8 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
-
+        user.$match.addObserver(self) { (newName) in
+            print("Second: ", newName)
+        }
     }
 }

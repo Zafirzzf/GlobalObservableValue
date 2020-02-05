@@ -14,7 +14,9 @@ class CacheStorer<T>: MemoryCacheStorerProtocol {
     var observable = AHObservable<[String : T]>(nil)
 }
 
-extension CacheStorer where T == Any {
+struct MemoryCacheStorerConfig {
     static let match = CacheStorer<Bool>()
     static let username = CacheStorer<String?>()
+    static let age = CacheStorer<Int>()
 }
+

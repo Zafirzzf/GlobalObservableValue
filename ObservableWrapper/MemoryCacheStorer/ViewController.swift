@@ -22,7 +22,9 @@ class ViewController: UIViewController {
         }
         relation2.match = false
         relation.match = true
-
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            relation2.match = true
+        }
 
     }
     
